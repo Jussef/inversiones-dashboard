@@ -17,15 +17,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { getWeekNumber, getWeekDays } from "../Utils/helpers";
+import Reto from "./Reto";
 
 const drawerWidth = 240;
 
 function Home(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const weekDays = getWeekDays();
-  const weekNumber = getWeekNumber();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -33,10 +31,10 @@ function Home(props) {
 
   const drawer = (
     <div>
-      <Toolbar />
+      <Toolbar><h4>JussefDev</h4></Toolbar>
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        {["Reto 52 semanas", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
@@ -111,19 +109,10 @@ function Home(props) {
       </Box>
       <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
         <Toolbar />
-        <Typography paragraph>{`El dia de la semana es ${weekNumber}`}</Typography>
-        <Typography paragraph>{`Empieza el lunes ${weekDays[0]} y termina el domingo ${weekDays[1]}`}</Typography>
+        <Reto />
       </Box>
     </Box>
   );
 }
-
-Home.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 export default Home;

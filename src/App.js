@@ -1,11 +1,14 @@
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./Utils/theme";
 import Home from "./Layouts/Home";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      HOLA
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Home />
+      </div>
+    </ThemeProvider>
   );
 }
 
