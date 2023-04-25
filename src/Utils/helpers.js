@@ -46,13 +46,13 @@ export function getDataWeekNumber() {
   const deposito = data[dayWeek].deposito;
   const balance = data[dayWeek].balance;
   const quincena = data[dayWeek].quincena;
-  numbersWeek.push(deposito)
-  numbersWeek.push(balance)
-//   if (quincena == undefined) {
-//       numbersWeek.push("Esta semana no es quincena")
-//   } else {
-//       numbersWeek.push(quincena)
-//   }
-      numbersWeek.push(quincena)
+  numbersWeek.push(deposito);
+  numbersWeek.push(balance);
+  //   if (quincena == undefined) {
+  //       numbersWeek.push("Esta semana no es quincena")
+  //   } else {
+  //       numbersWeek.push(quincena)
+  //   }
+  numbersWeek.push(quincena);
   return numbersWeek;
 }
