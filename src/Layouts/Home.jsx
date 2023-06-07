@@ -31,7 +31,9 @@ function Home(props) {
 
   const drawer = (
     <div>
-      <Toolbar><h4>JussefDev</h4></Toolbar>
+      <Toolbar>
+        <h4>JussefDev</h4>
+      </Toolbar>
       <Divider />
       <List>
         {["Reto 52 semanas", "Starred", "Send email", "Drafts"].map((text, index) => (
